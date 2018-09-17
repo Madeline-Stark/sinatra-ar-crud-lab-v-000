@@ -3,8 +3,8 @@
 
   <h1><%= @post.name %>:</h1>
   <p><%= @post.content %></p>
-  <form action="/posts/<% @post.id %>/delete" method="post"> <!--here am trying to dynamically set id of form action...and because erb need erb tags-->
-      <input type="hidden" name="_method" value="delete"> <!--here am changing method from post to delete -->
+  <form action="/posts/<% @post.id %>/delete" method="post">
+      <input type="hidden" name="_method" value="delete"> 
       <button type="submit">Delete</button>
   </form>
 </html>

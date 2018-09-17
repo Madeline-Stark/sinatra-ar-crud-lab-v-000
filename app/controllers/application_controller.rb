@@ -37,6 +37,7 @@ class ApplicationController < Sinatra::Base
   end
 
   patch '/posts/:id/' do
+    @post = Post.find_by(id: params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
     erb :show

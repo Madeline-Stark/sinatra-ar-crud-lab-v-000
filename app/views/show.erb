@@ -1,7 +1,7 @@
 require 'pry'
 <% require 'pry' %>
 binding.pry
-  <h1><%= @post.name %>:</h1>
+  <h1><%= binding.pry @post.name %>:</h1>
   <p><%= @post.content %></p>
   <form action="/posts/<%= @post.id %>/delete" method="post">
       <input type="hidden" name="_method" value="delete">

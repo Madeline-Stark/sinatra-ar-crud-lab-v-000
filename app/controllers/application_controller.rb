@@ -32,6 +32,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/posts/:id/edit' do #id is being interpolated here-colon makes dynamic route
+    @post = Post.find_by_id(params[:id])
     erb :edit
   end
 

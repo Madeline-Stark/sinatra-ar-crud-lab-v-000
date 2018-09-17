@@ -36,10 +36,10 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  patch '/posts/:id/edit' do
-    @post.content = params
-    erb :show
-  end
+  #patch '/posts/:id/edit' do
+  #  @post.content = params
+  #  erb :show
+  #end
 
   delete '/posts/:id/delete' do
     #to initiate this action-make delete button in form of a form

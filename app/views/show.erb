@@ -1,14 +1,10 @@
 
-  <h1><%= @post.name %>:</h1>
-  <p><%= @post.content %></p>
+  <%= @post.name %>
+  <%= @post.content %>
   <form action="/posts/<%= @post.id %>/delete" method="post">
       <input type="hidden" name="_method" value="delete">
       <button type="submit">Delete</button>
   </form>
 
 
-  <!--
-  require 'pry'
-  <% require 'pry' %>
-  <% binding.pry %>
--->
+  

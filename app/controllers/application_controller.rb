@@ -36,7 +36,7 @@ class ApplicationController < Sinatra::Base
     erb :edit
   end
 
-  post '/posts/:id/edit' do
+  patch '/posts/:id/edit' do
     @post.content = params
     erb :show
   end

@@ -49,6 +49,7 @@ class ApplicationController < Sinatra::Base
     #to initiate this action-make delete button in form of a form
     #form will send post request to delete controller action, where will identify post to delete and delete it
     #action will render delete.erb view which confirms that post has been deleted
+    @post = Post.find_by(id: params[:id])
     @post.destroy
     erb :delete
 
